@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor">❤️</div>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-heart">❤️</div>
+    <p class="loader-text">Loading something special for you...</p>
+  </div>
+
+  <!-- STARFIELD -->
+  <canvas id="starfield"></canvas>
+
+  <!-- FLOATING HEARTS -->
+  <div class="hearts" aria-hidden="true">
+    <span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span><span>❤️</span>
+  </div>
+
+  <!-- ── HERO ─────────────────────────────────────────── -->
+  <div class="hero" id="hero">
+    <h1 class="typing">Happy Birthday, My Love ❤️</h1>
+    <p class="hero-sub">My favorite Person, My prayer come true, My Dream Man</p>
+    <a href="#about" class="btn">Start Experience</a>
+  </div>
+
+  <!-- ── ABOUT / ENVELOPE LETTER ───────────────────────── -->
+  <section id="about" class="hidden slide-left">
+    <h2 class="section-title">A Letter For You</h2>
+    <div class="envelope-wrap">
+      <div class="envelope" id="envelope" onclick="openEnvelope()">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <span class="envelope-hint">Tap to open ✉️</span>
+        </div>
+      </div>
+      <div class="letter" id="letter">
+        <div class="letter-inner">
+          <div class="about">
+            <img src="Images/favorite.jpeg" alt="him">
+            <p>
+              You are my dream come true, I see your resilience, your determination, your selflessless, are you selfless, 
+              well, I think you aree. I see your heart, that's found space for me, and me alone. Space I sit proudly in. My Osman, I love you, not because they're words to 
+              describe anything but because, I just simply do. Happy Birthday Medo❤️
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COUNTDOWN ─────────────────────────────────────── -->
+  <section class="hidden slide-right">
+    <h2 class="section-title">Days Together</h2>
+    <div class="countdown-wrap">
+      <div class="countdown-block">
+        <span class="count-num" id="count-days">0</span>
+        <span class="count-label">Days</span>
+      </div>
+      <div class="countdown-block">
+        <span class="count-num" id="count-hours">0</span>
+        <span class="count-label">Hours</span>
+      </div>
+      <div class="countdown-block">
+        <span class="count-num" id="count-mins">0</span>
+        <span class="count-label">Minutes</span>
+      </div>
+      <div class="countdown-block">
+        <span class="count-num" id="count-secs">0</span>
+        <span class="count-label">Seconds</span>
+      </div>
+    </div>
+    <p class="countdown-note">Since the moment everything changed ✨<br></p>
+  </section>
+
+  <!-- ── TIMELINE ───────────────────────────────────────── -->
+  <section class="hidden slide-left">
+    <h2 class="section-title">Our Story</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">The Beginning</div>
+        <h4>We Met in your Python class</h4>
+        <span>The beginning of everything </span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">A long time After</div>
+        <h4>Our First Conversation</h4>
+        <span>When everything started feeling different</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Every Day Since</div>
+        <h4>Our Memories</h4>
+        <span>Every moment we laughed, grew, argued, disagreed and learned, its been just us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MEMORY JAR ─────────────────────────────────────── -->
+  <section class="hidden slide-right">
+    <h2 class="section-title">Reasons I Love You</h2>
+    <p class="jar-hint">Shake the jar to discover a reason 🫙</p>
+    <div class="jar-wrap">
+      <div class="jar" id="jar" onclick="shakeJar()">
+        <div class="jar-lid"></div>
+        <div class="jar-body">
+          <span class="jar-hearts">❤️ ❤️ ❤️</span>
+        </div>
+      </div>
+      <div class="jar-message" id="jar-msg"></div>
+    </div>
+    <div class="cards">
+      <div class="card">You never give up easily</div>
+      <div class="card">You think like a builder</div>
+      <div class="card">You make me feel safe</div>
+      <div class="card">You care in quiet ways</div>
+    </div>
+  </section>
+
+  <!-- ── TECH SECTION ───────────────────────────────────── -->
+  <section class="hidden slide-left">
+    <h2 class="section-title">System Report</h2>
+    <div class="code-box">
+      <div class="terminal">
+        <p>$ initializing love.exe...</p>
+        <p>$ scanning heart...</p>
+        <p>$ connection status...</p>
+        <p>$ stable ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ────────────────────────────────────────── -->
+  <section class="hidden slide-right">
+    <h2 class="section-title">Memories</h2>
+    <div class="gallery">
+      <div class="gallery-item"><img src="Images/osman1.jpeg" alt="Memory 1" /><div class="gallery-overlay">💕</div></div>
+      <div class="gallery-item"><img src="Images/us.jpeg" alt="Memory 2" /><div class="gallery-overlay">✨</div></div>
+      <div class="gallery-item"><img src="Images/sumsung inspired.jpeg" alt="Memory 3" /><div class="gallery-overlay">💻</div></div>
+      <div class="gallery-item"><img src="Images/gabriel.jpeg" alt="Memory 4" /><div class="gallery-overlay">❤️</div></div>
+    </div>
+  </section>
+
+  <!-- ── PLAYLIST ───────────────────────────────────────── -->
+ <section class="hidden slide-left">
+  <h2 class="section-title">Our Playlist</h2>
+  <p class="playlist-hint">Songs that remind me of you 🎵</p>
+  <div class="playlist">
+
+    <!-- SONG 1 -->
+    <div class="track" onclick="togglePlayer('player1', this)">
+      <div class="track-icon">▶</div>
+      <div class="track-info">
+        <span class="track-title">To Love You More</span>
+        <span class="track-artist">Céline Dion</span>
+      </div>
+    </div>
+    <div class="player-embed" id="player1">
+      <audio src="songs/love-you-more.mp3"></audio>
+      <div class="audio-player">
+        <button class="ap-play-btn">▶</button>
+        <div class="ap-info">
+          <div class="ap-progress-wrap">
+            <div class="ap-progress-fill"></div>
+          </div>
+          <div class="ap-time">
+            <span class="ap-current">0:00</span>
+            <span class="ap-duration">0:00</span>
+          </div>
+        </div>
+        <button class="ap-volume">🔊</button>
+      </div>
+    </div>
+
+    <!-- SONG 2 — duplicate the block above for more songs -->
+    <div class="track" onclick="togglePlayer('player2', this)">
+      <div class="track-icon">▶</div>
+      <div class="track-info">
+        <span class="track-title">Sing Me a Love Song</span>
+        <span class="track-artist">Soul Blues</span>
+      </div>
+    </div>
+    <div class="player-embed" id="player2">
+      <audio src="songs/sing.mp3"></audio>
+      <div class="audio-player">
+        <button class="ap-play-btn">▶</button>
+        <div class="ap-info">
+          <div class="ap-progress-wrap">
+            <div class="ap-progress-fill"></div>
+          </div>
+          <div class="ap-time">
+            <span class="ap-current">0:00</span>
+            <span class="ap-duration">0:00</span>
+          </div>
+        </div>
+        <button class="ap-volume">🔊</button>
+      </div>
+    </div>
+     <div class="track" onclick="togglePlayer('player3', this)">
+      <div class="track-icon">▶</div>
+      <div class="track-info">
+        <span class="track-title">A Thousand Years</span>
+        <span class="track-artist">Christiana Perri</span>
+      </div>
+    </div>
+<div class="player-embed" id="player3">
+      <audio src="songs/thousand.mp3"></audio>
+      <div class="audio-player">
+        <button class="ap-play-btn">▶</button>
+        <div class="ap-info">
+          <div class="ap-progress-wrap">
+            <div class="ap-progress-fill"></div>
+          </div>
+          <div class="ap-time">
+            <span class="ap-current">0:00</span>
+            <span class="ap-duration">0:00</span>
+          </div>
+        </div>
+        <button class="ap-volume">🔊</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ── MINI QUIZ ──────────────────────────────────────── -->
+  <section class="hidden slide-right">
+    <h2 class="section-title">How Well Do You Know Me?</h2>
+    <div class="quiz" id="quiz">
+      <div class="quiz-card active" data-q="0">
+        <p class="quiz-question">What do I like the most about you?</p>
+        <div class="quiz-options">
+          <button onclick="answer(this, false)">Your anger</button>
+          <button onclick="answer(this, true)">Your cute eyes</button>
+          <button onclick="answer(this, false)">Your determination</button>
+        </div>
+        <p class="quiz-result"></p>
+      </div>
+      <div class="quiz-card" data-q="1">
+        <p class="quiz-question">What do I say when something finally works?</p>
+        <div class="quiz-options">
+          <button onclick="answer(this, false)">"Finally!"</button>
+          <button onclick="answer(this, true)">"It works! But why…"</button>
+          <button onclick="answer(this, false)">"Easy."</button>
+        </div>
+        <p class="quiz-result"></p>
+      </div>
+      <div class="quiz-card" data-q="2">
+        <p class="quiz-question">What is my love language?</p>
+        <div class="quiz-options">
+          <button onclick="answer(this, false)">Words of affirmation</button>
+          <button onclick="answer(this, false)">Gifts</button>
+          <button onclick="answer(this, true)">Quality time</button>
+        </div>
+        <p class="quiz-result"></p>
+      </div>
+      <div class="quiz-score" id="quiz-score" style="display:none">
+        <p id="score-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL MESSAGE ──────────────────────────────────── -->
+  <section class="hidden slide-left">
+    <div class="final">
+      <h2>Happy Birthday ❤️</h2>
+      <p>
+        You are my favorite person in this whole world.
+        I hope you enjoy this birthday, and all the others yet to come.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── SECRET BUTTON ─────────────────────────────────── -->
+  <section style="text-align:center; padding: 40px 20px;">
+    <button id="secretBtn" class="btn">Click if you love me, of course I know you do </button>
+    <p id="secretMessage" style="display:none; margin-top: 20px; color: #f0a0c8; font-style:italic;">
+      Then I'll never stop loving you  ❤️
+    </p>
+  </section>
+
+  <footer>Made with ❤️ just for you</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
