@@ -357,7 +357,7 @@ section {
 .terminal p:nth-child(2){ animation-delay:2s; }
 .terminal p:nth-child(3){ animation-delay:3.8s; }
 .terminal p:nth-child(4){ animation-delay:5.6s; color:#d4a840; }
-@keyframes terminalTyping { from{width:0} to{width:100%} }
+@keyframes terminalTyping { from{width:0} to{width:27ch; }}
 
 /* ─── GALLERY ─────────────────────────────────────── */
 .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
