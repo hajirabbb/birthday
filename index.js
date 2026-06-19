@@ -361,3 +361,23 @@ function togglePlayer(id, el) {
   const playerDiv = document.getElementById(id);
   playerDiv.classList.toggle('open');
 }
+
+function typeText(el, text, speed = 70) {
+  let i = 0;
+  el.textContent = '';
+  function step() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(step, speed);
+    }
+  }
+  step();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const target = document.getElementById('typedText');
+  if (target) {
+    typeText(target, 'Happy Birthday, My Love ❤️', 70);
+  }
+});
